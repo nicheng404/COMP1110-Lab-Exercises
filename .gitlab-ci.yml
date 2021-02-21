@@ -34,6 +34,7 @@ lab1:
   stage: test
   script:
     - $JUNIT -c=comp1110.lab1.HelloWorldTest
+    - python3 /validate.py --exists src/comp1110/lab1/HelloTutor.png
   allow_failure: true
 
 lab2:

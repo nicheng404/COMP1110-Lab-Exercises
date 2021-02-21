@@ -302,15 +302,18 @@ If after following the above steps and reading the [instructions for working rem
 
 Once you're able to run the program, please modify the source code of `HelloTutor` to correctly show your tutor's name in the title and in the text label visible in the displayed window.
 
+Take a screenshot of your HelloTutor application window and save it as `HelloTutor.png`.
+Add it to your IntelliJ project in the `src/comp1110/lab1` directory (alongside `HelloTutor.java`).
+
 ### Finishing Up
 
 To finish up with the VDI, you need to commit and push your work and then close the associated issues.
 
 1.  **Commit and push to Gitlab**
 
-    Once you have completed your work on the lab computer, you should commit your new HelloWorld class and push it to GitLab.
+    Once you have completed your work on the lab computer, you should commit your new `HelloWorld` class, as well as your changes to `HelloTutor` and your `HelloTutor.png` screenshot, and push them all to GitLab.
     In the  **Git** menu, select **Commit...**.
-    You should see that the default changelist contains your changed `HelloWorld` and `HelloTutor` files.
+    You should see that the default changelist contains your changed `HelloWorld`, `HelloTutor`, and `HelloTutor.png` files.
     Below the list of files is the commit message panel.
     Change the commit message to `Finished lab exercises and passed all tests!`, then click **Commit and Push**.
     Ignore any warnings, and click **Push** on the next dialogue. You
