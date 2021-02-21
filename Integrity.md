@@ -11,8 +11,8 @@ and I am aware of the relevant
 and understand the consequences of me breaching those rules.
 
 
-Name: <your name>
+Name: <Ke Ning>
 
-UID: <your uid>
+UID: <u7175553>
 
-Date: <yyyy-mm-dd>
+Date: <2021-02-21>
