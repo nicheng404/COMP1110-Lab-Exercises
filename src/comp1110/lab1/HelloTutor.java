@@ -17,11 +17,11 @@ public class HelloTutor extends Application {
         // TODO: your tutor's name.
 
         // Create the root stack pane
-        primaryStage.setTitle("Hello _");
+        primaryStage.setTitle("Hello Josh");
         StackPane root = new StackPane();
 
         // Create label and add to root
-        Label helloLabel = new Label("Hello _!");
+        Label helloLabel = new Label("Hello Josh!");
         root.getChildren().add(helloLabel);
 
         // Set scene of stage with size 240x150 and show the stage
