@@ -41,7 +41,7 @@ Third, it helps your lecturer understand how the whole class is doing, making hi
 
 | Week | Going Well? (1-5) | Group OK? (1-5) | What I have done | What I will do | What impedes me |
 |---|:---:|:---:|---|---|---|
-| 1 ||-|||
+| 1 |1|-|Setting up the IntelliJ & Learning Java basic concepts|Learning Oracle's tutorials and reviewing the Lecture on Monday|Lack of Java (Programming) basic knowledge & Cannot verify the JavaFX installation on my pc
 | 2 ||-|||
 | 3 ||-|||
 | 4 |||||
