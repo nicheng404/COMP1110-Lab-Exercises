@@ -6,9 +6,6 @@ This lab contains material from modules [**J5**](https://cs.anu.edu.au/courses/c
 
 * Complete your [personal journal](https://gitlab.cecs.anu.edu.au/comp1110/comp1110-labs/blob/master/journal.md) for Week 2, commit it and push at least 5 minutes prior to the lab.
 
-* Next week (Week 3) will be the [lab test](https://cs.anu.edu.au/courses/comp1110/assessments/labtest/). 
-  You will still need to complete your personal journal for Week 3, commit and push 5 minutes prior to the lab test.
-
 ## Purpose
 
 In this lab you will learn a little more about GitLab before you write,
@@ -20,7 +17,6 @@ repo, and the Java exercises are done in IntelliJ.   <!-- You may work on your o
 You may use either the VDI, VirtualBox, or your own natively-installed version of IntelliJ and Java.
 
 **Your tutor will mark your engagement during the lab.**
-You will receive a mark of 0.9 for full engagement and a small bonus (a mark of 1.0) if you complete all the tasks during the lab (your tutor will use the CI to check this --- you don't need to be marked off).
 
 ## Part I:  30-Minute Check-In
 
