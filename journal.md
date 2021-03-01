@@ -42,7 +42,7 @@ Third, it helps your lecturer understand how the whole class is doing, making hi
 | Week | Going Well? (1-5) | Group OK? (1-5) | What I have done | What I will do | What impedes me |
 |---|:---:|:---:|---|---|---|
 | 1 |1|-|Setting up the IntelliJ|Learning Oracle's tutorials/Reviewing the Lecture|Lack of Java (Programming) basic knowledge
-| 2 ||-|||
+| 2 |2|-|Learning Oracle's toturials|Doing homework/Learning tutorials|Lack of Java (Programming) basic knowledge
 | 3 ||-|||
 | 4 |||||
 | 5 |||||
