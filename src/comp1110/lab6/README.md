@@ -11,7 +11,6 @@ This lab contains material from module [**X1**](https://cs.anu.edu.au/courses/co
 In this lab you will write a more advanced JavaFX program.
 
 **Your tutor will mark your engagement during the lab.**
-You will receive a mark of 0.9 for full engagement and a small bonus (a mark of 1.0) if you complete all the tasks during the lab (your tutor will use the CI to check this --- you don't need to be marked off).
 
 ## Part I: 30-Minute Check-In
 

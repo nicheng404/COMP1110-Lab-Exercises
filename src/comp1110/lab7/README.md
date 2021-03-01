@@ -11,7 +11,6 @@ This lab contains material from module [**J14**](https://cs.anu.edu.au/courses/c
 In this lab you will solve a simple search problem to find all of the different orderings of planting crops, given some basic rules.
 
 **Your tutor will mark your engagement during the lab.**
-You will receive a mark of 0.9 for full engagement and a small bonus (a mark of 1.0) if you complete all the tasks during the lab (your tutor will use the CI to check this --- you don't need to be marked off).
 
 ## Part I: 30-Minute Check-In
 

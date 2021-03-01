@@ -11,7 +11,6 @@ This lab contains material from modules [**S2**](https://cs.anu.edu.au/courses/c
 In this lab you will practise using Git in a group setting and develop a more complex Java program.
 
 **Your tutor will mark your engagement during the lab.**
-You will receive a mark of 0.9 for full engagement and a small bonus (a mark of 1.0) if you complete all the tasks during the lab (your tutor will use the CI to check this --- you don't need to be marked off).
 
 ## Part I: 30-Minute Check-In
 

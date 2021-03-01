@@ -5,6 +5,8 @@ This lab contains material from modules [**O1**](https://cs.anu.edu.au/courses/c
 ## Before the Lab
 
 * Complete your personal journal for Week 4, commit and push it at least 5 minutes prior to the lab test.
+* Next week (Week 4) will be the [lab test](https://cs.anu.edu.au/courses/comp1110/assessments/labtest/).
+  You will still need to complete your personal journal for Week 4, commit and push 5 minutes prior to the lab test.
 
 ## Purpose
 
@@ -13,8 +15,6 @@ program, learn about the stack trace, practise debugging a more
 complex program and will form groups for the group assignment.
 
 **Your tutor will mark your engagement during the lab.**
-You will receive a mark of 0.9 for full engagement and a small bonus (a mark of 1.0) if you complete all the tasks during the lab (your tutor will use the CI to check this --- you don't need to be marked off).
-
 
 ## Part I: 30-Minute Check-In
 
@@ -24,16 +24,6 @@ As usual, you will do _two_ things during the 30-minute check-in:
 2.  When you're not checking in with your tutor, you should be listening to the **lab leader** as they give an overview of what you'll be working through in this week's lab.
 
 ## Part II:  Your Lab Tasks
-
-### Assignment Groups.
-
-During today's lab you need to get to know your group, create your group's repository, and assign roles as per [deliverable D2A](https://cs.anu.edu.au/courses/comp1110/assessments/deliverables/#D2A).
-You must complete this step before you can do any other part of the group assignment.
-
-Close the associated issue (#13) and contact your tutor once you've completed
-[D2A](https://cs.anu.edu.au/courses/comp1110/assessments/deliverables/#D2A).
-
-### Tasks
 
 **Group design exercise**
 
