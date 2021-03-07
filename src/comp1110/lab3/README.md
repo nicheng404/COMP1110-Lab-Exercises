@@ -1,6 +1,6 @@
 # COMP1110 Lab 3
 
-This lab contains material from modules [**O1**](https://cs.anu.edu.au/courses/comp1110/lectures/oo/#O1) (Object Creation) and [**O5**](https://cs.anu.edu.au/courses/comp1110/lectures/oo/#O1) (Inheritance).
+This lab contains material from modules [**O1**](https://cs.anu.edu.au/courses/comp1110/lectures/oo/#O1) (Object Creation) and [**O2**](https://cs.anu.edu.au/courses/comp1110/lectures/oo/#O2) (the `this` keyword).
 
 ## Before the Lab
 
