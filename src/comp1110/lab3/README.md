@@ -10,9 +10,8 @@ This lab contains material from modules [**O1**](https://cs.anu.edu.au/courses/c
 
 ## Purpose
 
-In this lab you will develop a very simple object-oriented Java
-program, learn about the stack trace, practise debugging a more
-complex program and will form groups for the group assignment.
+In this lab you will learn more about object-orientation and
+develop a very simple object-oriented Java program.
 
 **Your tutor will mark your engagement during the lab.**
 
