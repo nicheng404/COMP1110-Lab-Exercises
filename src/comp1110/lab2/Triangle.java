@@ -26,7 +26,6 @@ public class Triangle {
                     }
                 }
                 System.out.print("\n");
-
             }
         }
 
