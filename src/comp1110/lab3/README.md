@@ -22,38 +22,7 @@ As usual, you will do _two_ things during the 30-minute check-in:
 1.  Check in with **your tutor**.  Briefly outline any issues you're having, that you'd particularly like help with during the lab (make sure you have your journal open and refer to it when you meet with your tutor).  After this week, you'll do check-in with your whole group, rather than individually.
 2.  When you're not checking in with your tutor, you should be listening to the **lab leader** as they give an overview of what you'll be working through in this week's lab.
 
-## Part II:  Your Lab Tasks
-
-**Group design exercise**
-
-Your tutor will walk you through a group design exercise for the following problem.
-
-*Problem brief*
-
-A client at a software design company wants assistance processing
-their documents.  After interviewing the client you find that their
-documents consist of a one sentence title, a date, and a series of
-paragraphs.  Each paragraph is a simple list of sentences.  Paragraphs
-are separated by new lines.  Each document also has an author (first
-and last name) and a document access level (open, internal or
-confidential).
-
- At a minimal level the client would like the software to be able to:
-* Count the number of words in the document (with or without the
-  title)
-* Count the number of characters in the document
-* Print out a document
-* Print out the date of the document
-* Print out the author of the document
-
-Additional desirable features:
-* Count the number of a particular type of word (noun, verb, proper
-  noun or other) 
-* Given a title, date, author and a string for the remaining document,
-  create a document file
-* Spell check the document 
-
-**Create, debug and test the Bucket class.**
+## Part II:  Create, debug and test the Bucket class.
 
 This exercise develops the concept of an *object*, which combines *state* (fields) and *behaviour* (methods that operate on those fields).
 
