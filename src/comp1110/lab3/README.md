@@ -4,7 +4,7 @@ This lab contains material from modules [**O1**](https://cs.anu.edu.au/courses/c
 
 ## Before the Lab
 
-* Complete your personal journal for Week 4, commit and push it at least 5 minutes prior to the lab test.
+* Complete your personal journal for Week 3, commit and push it at least 5 minutes prior to the lab.
 * Next week (Week 4) will be the [lab test](https://cs.anu.edu.au/courses/comp1110/assessments/labtest/).
   You will still need to complete your personal journal for Week 4, commit and push 5 minutes prior to the lab test.
 
