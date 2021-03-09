@@ -11,13 +11,11 @@ public class Bucket {
 
     //method
     public double getCapacity(){
-        double resultCapacity= CAPACITY;
-        return resultCapacity;
+        return CAPACITY;
     }
 
     public double getContents(){
-        double resultContents=contents;
-        return resultContents;
+        return contents;
     }
 
     public double empty(){
@@ -28,7 +26,7 @@ public class Bucket {
     }
 
     public void add(double amount){
-        contents=(amount+contents <= CAPACITY) ? amount+contents : CAPACITY;
+        contents= Math.min(amount + contents, CAPACITY);
 
         /*if (amount<=CAPACITY){
             contents=amount;
@@ -58,8 +56,8 @@ public class Bucket {
         big.add(smallContents);
 
         //print contents
-        big.getContents();
-        small.getContents();
+        //big.getContents();
+        //small.getContents();
         System.out.println(big.getContents());
         System.out.println(small.getContents());
 
