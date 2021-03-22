@@ -44,8 +44,8 @@ Third, it helps your lecturer understand how the whole class is doing, making hi
 | 1 |1|-|Setting up the IntelliJ|Learning Oracle's tutorials/Reviewing the Lecture|Lack of Java (Programming) basic knowledge
 | 2 |2|-|Learning Oracle's toturials|Doing homework/Learning tutorials|Lack of Java (Programming) basic knowledge
 | 3 |2|-|Learning Oracle's toturials|Watching recording and practise|Lack of Java (Programming) basic knowledge
-| 4 |||||
-| 5 |||||
+| 4 |2|2|Learning Oracle's tutorials|Watching recording and practise|Lack of Java (Programming) basic knowledge
+| 5 |2|3|Learning Oracle's tutorials|Watching recording and practise|Lack of Java (Programming) basic knowledge
 | 6 |||||
 | 7 |||||
 | 8 |||||
