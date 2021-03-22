@@ -8,7 +8,7 @@ This lab contains material from modules [**S2**](https://cs.anu.edu.au/courses/c
 
 ### Purpose
 
-In this lab you will practise using Git in a group setting and develop a more complex Java program.
+In this lab you will design a simple object-oriented program, practise using Git in a group setting, and learn additional strategies for debugging Java programs.
 
 **Your tutor will mark your engagement during the lab.**
 
@@ -23,6 +23,30 @@ As usual, you will do _two_ things during the 30-minute check-in:
 2.  When you're not checking in with your tutor, you should be listening to the **lab leader** as they give an overview of what you'll be working through in this week's lab.
 
 ## Part II:  Your Lab Tasks
+
+### Group design exercise
+
+Your tutor will walk you through a group design exercise for the following problem.
+
+*Problem brief*
+
+A client at a software design company wants assistance processing their documents. 
+After interviewing the client, you find that their documents consist of a one sentence title, a date, and a series of paragraphs.
+Each paragraph is a simple list of sentences.
+Paragraphs are separated by new lines.
+Each document also has an author (first and last name) and a document access level (open, internal or confidential).
+
+At a minimal level, the client would like the software to be able to:
+* Count the number of words in the document (with or without the title)
+* Count the number of characters in the document
+* Print out a document
+* Print out the date of the document
+* Print out the author of the document
+
+Additional desirable features:
+* Count the number of a particular type of word (noun, verb, proper noun or other)
+* Given a title, date, author and a string for the remaining document, create a document file
+* Spell check the document
 
 ### GitLab Upstream Pulls for Assignment
 
