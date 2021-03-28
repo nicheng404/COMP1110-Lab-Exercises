@@ -6,9 +6,34 @@ public class Dice {
     private final Random r = new Random();
 
     // Dice bounds (inclusive)
-    private int lowerBound; //Lower bound added to make dice more customizable
-    private int upperBound; //Maximum limit of dice roll
+    public int lowerBound; //Lower bound added to make dice more customizable
+    public int upperBound; //Maximum limit of dice roll
 
+
+    public Dice(int lowerBound, int upperBound){
+        this.lowerBound = lowerBound;
+        this.upperBound = upperBound;
+    }
+
+    // Adjust the bounds after dice is created
+    public void updateLowerBound(int lower){
+        lowerBound = lower;
+    }
+
+    public void updateUpperBound(int upper){
+        upperBound = upper;
+    }
+
+    // Find the range of the dice roll
+    public int diceRange() {
+        return (1+upperBound-lowerBound) ;
+    }
+
+    // Roll the dice, resulting in random int between lower and upper bound (inclusive)
+    // e.g. a dice roll of between 1 - 3 can produce 1,2 or 3.
+    public int rollDice(){
+        return upperBound - r.nextInt(this.diceRange()) ;
+    }
     public static void main(String[] args) {
         //Test basic dice rolling
 
@@ -30,7 +55,7 @@ public class Dice {
 
         // Update bounds (1-10)
         unusual_dice.updateLowerBound(1);
-        unusual_dice.updateLowerBound(10);
+        unusual_dice.updateUpperBound(10);
 
         // Roll 10 times
         for (int i = 0; i < 10; i++){
@@ -39,30 +64,7 @@ public class Dice {
         }
     }
 
-    public Dice(int lowerBound, int upperBound){
-        this.lowerBound = 1;
-        this.upperBound = upperBound;
-    }
 
-    // Adjust the bounds after dice is created
-    public void updateLowerBound(int lowerBound){
-        lowerBound = lowerBound;
-    }
-
-    public void updateUpperBound(int upperBound){
-        upperBound = upperBound;
-    }
-
-    // Find the range of the dice roll
-    public int diceRange() {
-        return lowerBound - upperBound;
-    }
-
-    // Roll the dice, resulting in random int between lower and upper bound (inclusive)
-    // e.g. a dice roll of between 1 - 3 can produce 1,2 or 3.
-    public int rollDice(){
-        return r.nextInt(this.diceRange()) + upperBound;
-    }
 
 
 }
