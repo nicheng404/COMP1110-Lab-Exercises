@@ -63,6 +63,14 @@ lab4:
     - $JUNIT -c=comp1110.lab4.HeadsOrTailsTest
   allow_failure: true
 
+lab6:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - $JUNIT -c=comp1110.lab6.WorldTest
+  allow_failure: true
+
 lab7:
   tags:
     - comp1110

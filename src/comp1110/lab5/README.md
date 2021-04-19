@@ -25,13 +25,13 @@ As usual, you will do _two_ things during the 30-minute check-in:
 
 1.  **Create a new JavaFX class.**
 
-    In the Java package `comp1110.lab6` within your labs repo, create a new Java class, `Board`, which extends `javafx.Application`, that draws a 600x519 pixel window.  Set the window title to "Board".
+    In the Java package `comp1110.lab5` within your labs repo, create a new Java class, `Board`, which extends `javafx.Application`, that draws a 600x519 pixel window.  Set the window title to "Board".
 
 2.  **Draw a triangle**
 
     Create an upright 200x200x200 equilateral triangle within the scene you made in step 1. Use the `Polygon` class. From the origin (0,0), the triangle should extend an equal distance in both positive and negative x directions, and positive and negative y directions. Use `setLayoutX()` and `setLayoutY()` to recenter the triangle in the middle of your window. Set the fill color of the triangle to `LIGHTGREY`.
 
-    ![alt triangle](assets/lab6a.png)
+    ![alt triangle](assets/lab5a.png)
 
     *Hint: Relative to the origin, the apex of the triangle should be at (0.0, -86.6), and the right and left corners of the base should be (100.0, 86.6) and (-100.0, 86.6), where 100 = 200/2 and 86.6 = sqrt((200*200)-(100*100))/2;*
 
@@ -51,7 +51,7 @@ As usual, you will do _two_ things during the 30-minute check-in:
 
    Reduce the size of each triangle to 196 pixels, while maintaining the spacing as if they were size 200. This should create the effect of a white border around each triangle.
 
-   ![alt board](assets/lab6b.png)
+   ![alt board](assets/lab5b.png)
 
 6. **Finish up**
 
@@ -60,7 +60,7 @@ As usual, you will do _two_ things during the 30-minute check-in:
 
 ### Extension: JavaFX Drag and Drop
 
-Extend the your Board program from Lab 6 to include drag-and-drop.
+Extend the your Board program to include drag-and-drop.
 
 1. **Create an inner class**
 
@@ -78,7 +78,7 @@ Extend the your Board program from Lab 6 to include drag-and-drop.
 
    Within the `start()` method of your `Board` class, create a new `DraggableTriangle` of size 200, centered at (300, 260), and with the board (i.e. `this`) passed as the fourth argument to the constructor. Remember to add the draggable triangle to your root group.
 
-   ![alt board](assets/lab7a.png)
+   ![alt board](assets/lab5c.png)
 
 5. **Make the inner class draggable**
 
@@ -111,7 +111,7 @@ Extend the your Board program from Lab 6 to include drag-and-drop.
     * Add a method `void highlightNearestTriangle(double x, double y)` that highlights the triangle nearest a point (`x`, `y`). This method should first un-highlight the currently highlighted triangle (if there is one), by filling it with `LIGHTGREY`. It should then set the variable `highlighted` to be equal to the nearest triangle to (`x`, `y`), and then it should set the fill color of the highlighted triangle to `GREEN` (or whatever color you prefer).
     * Add a line to your `setOnMouseDragged()` event in the constructor of `DraggableTriangle` that calls `board.highlightNearestTriangle()` with the location of your draggable triangle as arguments. You should now find that as you drag your red triangle around, the triangle nearest it is highlighted green.
 
-   ![alt board](assets/lab7b.png)
+   ![alt board](assets/lab5d.png)
 
 9. **Snap to nearest triangle**
 
