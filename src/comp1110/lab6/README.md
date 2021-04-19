@@ -35,6 +35,12 @@ Each of these organisms behaves according to a simple set of rules.
 
 Animals (both rabbits and foxes) reproduce whenever they are not hungry.
 
+The locations in the world are laid out on a Cartesian grid.
+Each location has an x and a y coordinate, and eight neighbouring locations, which are those locations with x and y coordinates that differ by no more than 1.
+The world has [periodic boundary conditions](https://en.wikipedia.org/wiki/Periodic_boundary_conditions), which means that if an animal moves off the right-hand edge of the grid (`x == world.sizeX`), it reappears on the left-hand edge (`x == 0`) and vice-versa, and if an animal moves off the bottom edge of the grid (`y == world.sizeY`), it reappears on the bottom edge (`y == 0`) and vice-versa.
+The boundary conditions are shown for an example 5x4 grid in the diagram below; for example, location 15 has neighbouring locations {14,10,11,19,16,4,0,1}.
+![diagram of periodic boundary conditions](../../../assets/periodic_boundary.png)
+
 The class [World.java](World.java) contains an incomplete implementation of the simulation; Javadoc in this class defines the rules for each type of organism.
 You should complete the methods marked "FIXME".
 

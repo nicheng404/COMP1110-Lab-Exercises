@@ -10,6 +10,8 @@ import java.util.Random;
  * The world is divided into a Cartesian grid of sizeX * sizeY locations,
  * each of which contains an amount [0..5] of grass and may also contain an
  * animal, either a rabbit or a fox.
+ * The locations in the world are laid out in a Cartesian grid with periodic
+ * boundary conditions.
  */
 public class World {
     static final int MAX_GRASS = 5;
@@ -63,11 +65,11 @@ public class World {
         }
 
         /**
-         * If there are any squares neighbouring the current square which do
+         * If there are any locations neighbouring the current location which do
          * not contain animals, randomly choose to move to one of the
-         * empty squares.
-         * If there are no empty squares neighbouring this square, then remain
-         * in the current square.
+         * empty locations.
+         * If there are no neighbouring empty locations, then remain
+         * in the current location.
          */
         protected void randomMove() {
             boolean[] empty = new boolean[9];
@@ -141,10 +143,11 @@ public class World {
         /**
          * If the amount of grass in this rabbit's location is 1 or more,
          * reduce the amount of grass by one, and reduce this rabbit's hunger
-         * level by 1.
+         * level by 1 (to a minimum hunger level of 0).
          * Otherwise, move to a random neighbouring empty location (or stay
          * in the current location if there are no empty neighbouring
-         * locations), and increase this rabbit's hunger level by 1.
+         * locations), and increase this rabbit's hunger level by 1 (to a
+         * maximum hunger level of MAX_HUNGER).
          */
         void moveAndEat() {
             // FIXME complete this method
@@ -168,10 +171,11 @@ public class World {
          * Move to a neighbouring rabbit and consume it, or move at random.
          * If there are rabbits in any of the neighbouring locations, choose
          * a random neighbouring location containing a rabbit and move to it,
-         * and reduce this fox's hunger by 1.
+         * and reduce this fox's hunger by 1 (to a minimum hunger level of 0).
          * If there are no rabbits in any of the neighbouring locations, choose
          * to move to a random empty neighbouring location, or stay in the
-         * current location, and increase this fox's hunger by 1.
+         * current location, and increase this fox's hunger by 1 (to a maximum
+         * hunger level of MAX_HUNGER).
          */
         void moveAndEat() {
             // FIXME complete this method
@@ -196,12 +200,16 @@ public class World {
         this.sizeY = sizeY;
         grass = new int[sizeX][sizeY];
         animals = new Animal[sizeX][sizeY];
+        // for each square:
         for (int x = 0; x < sizeX; x++) {
             for (int y = 0; y < sizeY; y++) {
+                // put a random amount of grass in this square
                 grass[x][y] = rand.nextInt(MAX_GRASS);
                 double d = rand.nextDouble();
+                // with a probability of INITIAL_DENSITY_FOXES, put a fox in this square
                 if (d < INITIAL_DENSITY_FOXES) {
                     createFox(x, y);
+                    // with a probability of INITIAL_DENSITY_RABBITS, put a rabbit in this square
                 } else if (d < (INITIAL_DENSITY_FOXES + INITIAL_DENSITY_RABBITS)) {
                     createRabbit(x, y);
                 }
@@ -266,7 +274,9 @@ public class World {
      * from the world (as it has starved to death).
      */
     public void update() {
+        // animals that existed at the start of the update and survived
         List<Animal> survivors = new ArrayList<>();
+        // new animals created by reproduction this turn
         List<Animal> newGeneration = new ArrayList<>();
         for (Animal animal : animalsByAge) {
             animal.moveAndEat();
@@ -281,17 +291,20 @@ public class World {
             for (int y = 0; y < sizeY; y++) {
                 Animal animal = animals[x][y];
                 if (animal == null) {
+                    // no animal in this location - the grass grows
                     grass[x][y] = Math.min(MAX_GRASS, grass[x][y] + 1);
                 } else if (animal.hunger == Animal.MAX_HUNGER) {
-                    // animal starved to death
+                    // the animal in this location starved to death
                     animals[x][y] = null;
                 } else {
+                    // the animal in this location survived
                     survivors.add(animal);
                     if (animals[x][y] instanceof Rabbit) rabbits++;
                     else if (animals[x][y] instanceof Fox) foxes++;
                 }
             }
         }
+        // update the list of animals to include only survivors and new animals
         animalsByAge.retainAll(survivors);
         animalsByAge.addAll(newGeneration);
 
