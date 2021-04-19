@@ -1,0 +1,18 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="L6 WorldTest" type="JUnit" factoryName="JUnit">
+    <module name="COMP1110 Labs" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="comp1110.lab6.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="comp1110.lab6" />
+    <option name="MAIN_CLASS_NAME" value="comp1110.lab6.WorldTest" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
