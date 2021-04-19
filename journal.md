@@ -47,7 +47,7 @@ Third, it helps your lecturer understand how the whole class is doing, making hi
 | 4 |2|2|Learning Oracle's tutorials|Watching recording and practise|Lack of Java (Programming) basic knowledge
 | 5 |2|3|Learning Oracle's tutorials|Watching recording and practise|Lack of Java (Programming) basic knowledge
 | 6 |2|1|Learning Oracle's tutorials|Watching recording and practise|Lack of Java (Programming) basic knowledge
-| 7 |||||
+| 7 |3|2|Ass2 D2C|Watching recording and practise|Lack of Java (Programming) basic knowledge and got ill.
 | 8 |||||
 | 9 |||||
 | 10 |||||
