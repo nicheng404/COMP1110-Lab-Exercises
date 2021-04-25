@@ -1,5 +1,6 @@
 package comp1110.lab6;
 
+import comp1110.lab6.World;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;

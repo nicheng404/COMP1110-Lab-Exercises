@@ -151,6 +151,13 @@ public class World {
          */
         void moveAndEat() {
             // FIXME complete this method
+            if (grass[x][y] > 0) {
+                grass[x][y]--;
+                if (hunger > 0) hunger--;
+            } else {
+                randomMove();
+                if (hunger < MAX_HUNGER) hunger++;
+            }
         }
 
         @Override
@@ -179,6 +186,46 @@ public class World {
          */
         void moveAndEat() {
             // FIXME complete this method
+            if (foxRandomMove()) {
+                if (hunger > 0) hunger--;
+            } else {
+                randomMove();
+                if (hunger < MAX_HUNGER) hunger++;
+            }
+        }
+
+        /**
+         * If there are rabbits in any of the neighbouring locations, choose
+         * a random neighbouring location containing a rabbit and move to it
+         * @return true if there are rabbits in any of the neighbouring locations.
+         */
+        boolean foxRandomMove() {
+            boolean[] empty = new boolean[9];
+            boolean anyEmpty = false;
+            int i = 0;
+            for (int dX = -1; dX <= 1; dX++) {
+                for (int dY = -1; dY <= 1; dY++) {
+                    int neighbourX = (x + dX + sizeX) % sizeX;
+                    int neighbourY = (y + dY + sizeY) % sizeY;
+                    if (animals[neighbourX][neighbourY] != null &&
+                            animals[neighbourX][neighbourY] instanceof Rabbit) {
+                        empty[i] = true;
+                        anyEmpty = true;
+                    }
+                    i++;
+                }
+            }
+            if (anyEmpty) {
+                animals[x][y] = null;
+                int move = rand.nextInt(9);
+                while (!empty[move]) move = (move - 1 + 9) % 9;
+                int xMove = move / 3 - 1;
+                int yMove = move % 3 - 1;
+                this.x = (x + xMove + sizeX) % sizeX;
+                this.y = (y + yMove + sizeY) % sizeY;
+                animals[x][y] = this;
+            }
+            return anyEmpty;
         }
 
         @Override
@@ -260,7 +307,23 @@ public class World {
      */
     public String getCurrentState() {
         // FIXME complete this method
-        return null;
+        StringBuilder builder = new StringBuilder();
+        for (int x = 0; x < sizeX; x++) {
+            for (int y = 0; y < sizeY; y++) {
+                builder.append(grass[x][y]);
+                Animal animal = animals[x][y];
+                if (animal == null) builder.append("  ");
+                else {
+                    if (animal instanceof Rabbit) {
+                        builder.append('r');
+                    } else if (animal instanceof Fox) {
+                        builder.append('f');
+                    }
+                    builder.append(animal.hunger);
+                }
+            }
+        }
+        return builder.toString();
     }
 
     /**
