@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
+import static comp1110.lab7.CropRotation.Group.*;
 public class CropRotation {
     /**
      * Each Vegetable is assigned to one of four groups.
