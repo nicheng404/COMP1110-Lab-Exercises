@@ -74,7 +74,17 @@ public class CropRotation {
         /* If there are no crops or no seasons or the number of seasons is
            greater than the number of crops, return an empty list. */
 
-        return null;  // FIXME complete this method
+        if ((crops.isEmpty())||(seasons==0) ||(seasons>crops.size())){
+            return rotations;
+        }
+
+        for (Vegetable vegetable:crops){
+            used.add(vegetable);
+            getFixedRotation(crops,seasons,used,rotations);
+            used.remove(vegetable);
+        }
+
+        return rotations;  // FIXME complete this method
     }
 
     /**
@@ -88,6 +98,22 @@ public class CropRotation {
     private static void getFixedRotation(Set<Vegetable> crops, int seasons, List<Vegetable> used,
                                          Set<List<Vegetable>> rotations) {
         // FIXME complete this method
+
+        Vegetable last = used.get(used.size()-1);
+
+        if (used.size()==seasons){
+            rotations.add(List.copyOf(used));
+            return;
+        }
+        for (Vegetable vegetable:crops){
+            if(!used.contains(vegetable)){
+                if (canFollow(last,vegetable)){
+                    used.add(vegetable);
+                    getFixedRotation(crops,seasons,used,rotations);
+                    used.remove(vegetable);
+                }
+            }
+        }
     }
 
     /**
@@ -98,6 +124,11 @@ public class CropRotation {
      * @return true if next can follow first
      */
     private static boolean canFollow(Vegetable first, Vegetable next) {
-        return false;  // FIXME complete this method
+        return switch (first.group) {
+            case ALLIUM -> next.group == Group.FRUITING;
+            case FRUITING -> next.group == Group.LEGUME;
+            case BRASSICA -> next.group == Group.ALLIUM;
+            case LEGUME -> next.group == Group.BRASSICA;
+        }; // FIXME complete this method
     }
 }
