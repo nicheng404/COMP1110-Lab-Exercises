@@ -30,7 +30,23 @@ public class FamilyTree {
      */
     public static String getAncestry(Individual ancestor, String targetName) {
         // FIXME complete this method
-        return "";
+        if(ancestor.name.equals(targetName)){
+            return targetName;
+        }
+        if (ancestor.children == null){
+            return null;
+        }
+        if (ancestor.isChild(targetName)) {
+            return  " born of " + ancestor.name;
+        }else {
+            for (Individual child: ancestor.children) {
+                String parentName = getAncestry(child, targetName);
+                if (parentName != null) {
+                    return parentName + " born of " + ancestor.name;
+                }
+            }
+            return null;
+        }
     }
 
     /**
@@ -48,5 +64,20 @@ public class FamilyTree {
             this.name = name;
             this.children = children;
         }
+
+
+        public boolean isChild(String targetName){
+            if (children == null){
+                return false;
+            }
+            for (Individual member:
+                    children) {
+                if (member.equals(targetName)){
+                    return true;
+                }
+            }
+            return false;
+        }
+
     }
 }

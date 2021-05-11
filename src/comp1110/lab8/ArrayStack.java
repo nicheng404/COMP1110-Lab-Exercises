@@ -1,5 +1,6 @@
 package comp1110.lab8;
 
+import java.util.Arrays;
 import java.util.EmptyStackException;
 
 /**
@@ -14,12 +15,40 @@ import java.util.EmptyStackException;
  * java.util.EmptyStackException.
  */
 public class ArrayStack<T> {
+
+
+    public int numElement = 0;
+    public static final int DEFAULT_SIZE = 100000;
+    public static final double GROWTH_FACTOR = 1.5;
+    public int size;
+    public T[] stackArray = (T[]) new Object[DEFAULT_SIZE];
+
+    //    private Object EmptyStackException;
+
+//    public ArrayStack() {
+//        stackArray = (T[]) new Object[100000];
+//    }
+
+//    public int getSize(){
+//        return stackArray.length;
+//    }
+//
+//    public void printEach(){
+//        for (T t: stackArray){
+//            System.out.println(t);
+//        }
+//    }
+
+
+    public ArrayStack() {
+    }
+
     /**
      * @return true if the stack is empty
      */
     public boolean isEmpty() {
         // FIXME complete this method
-        return false;
+        return numElement ==0 ;
     }
 
     /**
@@ -30,6 +59,25 @@ public class ArrayStack<T> {
      */
     public void push(T value) {
         // FIXME complete this method
+        if(numElement == size){
+            //increase size by factor(multiply)
+            size = (int) (size*GROWTH_FACTOR);
+            //create new array
+            T[] newArray = (T[]) new Object[size];
+            //copy old into new (iterate and write)
+            for (int i =0;i<numElement;i++){
+                newArray[i] = stackArray[i];
+            }
+            stackArray = newArray;
+            stackArray[numElement+1] = value;
+            numElement++;
+        }else {
+            stackArray[numElement] = value;
+            numElement++;
+        }
+        stackArray[numElement] = value;
+        numElement++;
+
     }
 
     /**
@@ -38,9 +86,23 @@ public class ArrayStack<T> {
      * @return the value that was popped from the stack
      * @throws EmptyStackException if the stack is currently empty
      */
-    public T pop() {
+    public T pop() throws EmptyStackException {
         // FIXME complete this method
-        return null;
+        if (this.isEmpty()){
+            throw new EmptyStackException();
+        }
+        try {
+            this.isEmpty();
+        } catch (EmptyStackException e){
+
+        }
+        T out = stackArray[numElement-1];
+        stackArray[numElement-1] = null;
+//        System.out.println("set to null");
+        numElement --;
+//        System.out.println("--");
+        System.out.println("pop one");
+        return out;
     }
 
     /**
@@ -52,7 +114,11 @@ public class ArrayStack<T> {
      */
     public T peek() {
         // FIXME complete this method
-        return null;
+        if (this.isEmpty()){
+            throw new EmptyStackException();
+        }
+        T value = stackArray[numElement-1];
+        return value;
     }
 
     /**
@@ -65,7 +131,13 @@ public class ArrayStack<T> {
      */
     public boolean contains(T value) {
         // FIXME complete this method
-        return false;
+        if (value != null){
+            return Arrays.asList(stackArray).contains(value);
+
+        }else {
+            return false;
+        }
+
     }
 
     /**
@@ -79,7 +151,23 @@ public class ArrayStack<T> {
      * @return a String representation of this stack
      */
     public String toString() {
-        // FIXME complete this method
-        return null;
+        // FIXME complete this methods
+        String out = "";
+        if (this.isEmpty()){
+            return "";
+        }else {
+            for (int i = stackArray.length-1;i>0;i--){
+                if (this.stackArray[i]==null){
+                } else {
+                    out += stackArray[i].toString();
+                    out += ","; } }
+            out += stackArray[0].toString();
+            return out; } }
+
+
+    public static void main(String[] args) {
+//        ArrayStack arrayStack = new ArrayStack();
+  //      System.out.println(arrayStack.getSize());
+    //    arrayStack.printEach();
     }
 }

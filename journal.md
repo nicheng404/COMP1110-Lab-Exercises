@@ -50,6 +50,6 @@ Third, it helps your lecturer understand how the whole class is doing, making hi
 | 7 |3|2|Ass2 D2C|Watching recording and practise|Lack of Java (Programming) basic knowledge and got ill.
 | 8 |3|2|Ass2 D2E|Watching recording and practise|Lost grandma
 | 9 |3|2|Ass2 D2F|Watching recording and practise|Lack of collections knowledge
-| 10 |||||
+| 10 |3|2|Ass2|Watching recording and practise|Lack of collections knowledge
 | 11 |||||
 | 12 |||||
